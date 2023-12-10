@@ -1,12 +1,13 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
 html,
-body {
-  height: 100%;
-}
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  min-height: 100vh;
-  background: #e2e2e2;
+  background: #777777 url('./assets/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 .app-header {
   justify-content: space-between;

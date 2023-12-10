@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Edit User</h2>
+<div mat-dialog-content>
+  <!-- Display the editable fields -->
+  <p><strong>First Name:</strong> <input [(ngModel)]="editedUser.firstname" /></p>
+  <p><strong>Last Name:</strong> <input [(ngModel)]="editedUser.lastname" /></p>
+  <p><strong>Date of Birth:</strong> <input type="date" [(ngModel)]="editedUser.dob" /></p>
+  <p><strong>Address:</strong> <input [(ngModel)]="editedUser.address" /></p>
+  <p><strong>Phone Number:</strong> <input [(ngModel)]="editedUser.phoneNumber" /></p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary" (click)="onSaveClick()">Save</button>
+</div>

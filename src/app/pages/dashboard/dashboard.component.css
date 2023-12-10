@@ -1,0 +1,28 @@
+.user-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  mat-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  mat-card-content {
+    text-align: left;
+    padding: 16px; /* Adjust padding as needed */
+  }
+  
+  /* Optional: Adjust other styles based on your design */
+  mat-card-title-group {
+    margin-left: 0; /* Reset margin-left to 0 for left alignment */
+  }
+  
+  mat-card-actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+  

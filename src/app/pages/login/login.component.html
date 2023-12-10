@@ -1,1 +1,47 @@
-<p>login works!</p>
+<mat-card class="custom-card">
+  <mat-card-header>
+    <mat-card-title>User Registration</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="myForm" (ngSubmit)="login()">
+    <mat-card-content>
+      <mat-form-field [ngClass]="{ 'invalid-field': isInvalid('email') }">
+        <input
+          matInput
+          formControlName="email"
+          type="email"
+          placeholder="Email"
+        />
+        <mat-error *ngIf="isInvalid('email')"
+          >Enter a valid email address</mat-error
+        >
+      </mat-form-field>
+
+      <mat-form-field [ngClass]="{ 'invalid-field': isInvalid('password') }">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <mat-error *ngIf="isInvalid('password')"
+          >Password is required</mat-error
+        >
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions>
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="myForm.invalid"
+      >
+        Login
+      </button>
+    </mat-card-actions>
+    <mat-card-actions>
+      <button mat-raised-button color="light-blue" (click)="navigateSignUp()">
+        Sign Up
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>

@@ -1,1 +1,21 @@
-<p>dashboard works!</p>
+<div *ngIf="user" class="user-card">
+    <mat-card class="mat-elevation-z2">
+      <mat-card-header>
+        
+        <mat-card-title-group>
+          <mat-card-title>{{ user.firstname }} {{ user.lastname }}</mat-card-title>
+          <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+    
+      <mat-card-content>
+        <p><strong>Date of Birth:</strong> {{ user.dob | date }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
+        <p><strong>Phone Number:</strong> {{ user.phoneNumber }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="editUser()">Edit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
