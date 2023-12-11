@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
-import { AuthGuard } from './AuthGuard/auth.guard';
+// import { AuthGuard } from './AuthGuard/auth.guard';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -31,7 +31,9 @@ import { UserEditComponent } from '../app/pages/dashboard/user-edit/user-edit.co
     
    
   ],
-  providers: [RegistrationService,AuthGuard],
+  providers: [RegistrationService,
+    // AuthGuard
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

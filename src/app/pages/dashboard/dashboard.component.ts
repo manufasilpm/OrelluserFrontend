@@ -3,6 +3,7 @@ import { User, UserDetails } from 'src/app/model/user.model';
 import { UserService } from 'src/app/services/user.service';
 import { MatDialog } from '@angular/material/dialog';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +15,7 @@ export class DashboardComponent implements OnInit {
   user: UserDetails | null = null;
   displayedColumns: string[] = ['firstname', 'lastname', 'email', 'dob', 'address', 'phoneNumber'];
 
-  constructor(private userService:UserService, public dialog: MatDialog) { }
+  constructor(private userService:UserService, public dialog: MatDialog,private router:Router) { }
 
   ngOnInit(): void {
     this.getUserDetails();
@@ -56,6 +57,11 @@ export class DashboardComponent implements OnInit {
           }
         );
       }})
+  }
+
+  logOut():void{
+    localStorage.setItem("access_token","")
+    this.router.navigate(['/login']);
   }
 
 }
